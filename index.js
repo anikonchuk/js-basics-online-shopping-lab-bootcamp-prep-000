@@ -49,9 +49,15 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  var inCart = false
+  var inCart = false;
+  for(var i = 0; i<cart.length; i++){
+    if(item === cart[i].itemName){
+      inCart = true;
+      cart.splice()
+    }
+  }
   if (inCart) {
-    var removed = cart.splice()
+    var removed = cart.splice();
     return cart;
   } else {
     return "That item is not in your cart.";
